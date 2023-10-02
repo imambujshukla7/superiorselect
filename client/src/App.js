@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const productRoutes = require('./routes/productRoutes');
 const dotenv = require('dotenv');
 
-dotenv.config(); // Load environment variables from .env
+dotenv.config(); // environment variables from .env
 
 const app = express();
 
