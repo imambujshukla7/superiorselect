@@ -1,13 +1,12 @@
 // ProductList.js
-
 import React, { useState, useEffect } from 'react';
-import api from '../services/api';
+import api from 'superiorselect/client/src/services/api';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Fetch products from the server when the component mounts
+   
     const fetchProducts = async () => {
       try {
         const response = await api.get('/products');
@@ -18,7 +17,19 @@ const ProductList = () => {
     };
 
     fetchProducts();
-  }, []); // Empty dependency array ensures the effect runs only once on mount
+  }, []); // ensures effect runs only once on mount
+
+  import userService from 'superiorselect/client/src/services/userService';
+
+const handleRegister = async (userData) => {
+  try {
+    const result = await userService.register(userData);
+    
+  } catch (error) {
+    
+    console.error('Error registering user:', error);
+  }
+};
 
   return (
     <div>
@@ -33,7 +44,7 @@ const ProductList = () => {
               <h3>{product.name}</h3>
               <p>{product.description}</p>
               <p>${product.price}</p>
-              {/* Add a button or link for adding the product to the cart */}
+               <button onClick={() => handleAddToCart(product._id)}>
             </div>
           </li>
         ))}
