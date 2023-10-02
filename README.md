@@ -2,7 +2,7 @@
 
 # SuperiorSelect
 
-SuperiorSelect is a MERN stack e-commerce project for selling fashion wear products.
+SuperiorSelect is a MERN stack e-commerce platform for selling fashion wear products.
 
 ## Features
 
