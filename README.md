@@ -1,5 +1,3 @@
-### File: `superiorselect/README.md`
-
 # SuperiorSelect
 
 SuperiorSelect is a MERN stack e-commerce platform for selling fashion wear products.
